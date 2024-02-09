@@ -10,7 +10,7 @@ function add(n1: number, n2: number, showResult: boolean, phrase: string) {
 }
 
 const num1 = 25
-const num2 = 10
+const num2 = 19
 const printResult = true;
 const phrase = "This is statically typed"
 
