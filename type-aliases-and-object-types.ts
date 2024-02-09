@@ -22,3 +22,4 @@ function isOlder(user: User) {
 
 greet({name: "Joash", age: 25})
 console.log(isOlder({name: "Joash", age: 25}))
+

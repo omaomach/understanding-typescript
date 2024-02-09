@@ -15,3 +15,6 @@ function isOlder(user) {
 }
 greet({ name: "Joash", age: 25 });
 console.log(isOlder({ name: "Joash", age: 25 }));
+var u2 = "Joseph";
+u2 = "Michael";
+console.log(u2);
