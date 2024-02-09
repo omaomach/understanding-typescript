@@ -14,7 +14,7 @@
 // console.log(person.name);
 
 type Input = number | string; 
-type ConversionDescriptor = "as-number" | "as-text";
+type ConversionDescriptor = "as-number" | "as-string";
 
 function combine(
     input1: Input, 
