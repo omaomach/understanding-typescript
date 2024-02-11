@@ -5,5 +5,5 @@ userInput = 5;
 userInput = "Joshua";
 // userName = userInput;
 if (typeof userInput === "string") {
-    userName = userInput;
+    console.log(userName = userInput);
 }

@@ -19,7 +19,7 @@ addAndHandle(10, 20, function (result) {
 });
 function sendRequest(data, cb) {
     // ... sending request with "data"
-    return cb({ data: "Hi there!" });
+    return cb({ data: data });
 }
 sendRequest("Send this!", function (response) {
     console.log(response);
