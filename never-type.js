@@ -5,3 +5,4 @@ function generateError(message, code) {
 }
 const result = generateError("Error Imehappen!", 500);
 console.log(result); // nothing is returned here
+//# sourceMappingURL=never-type.js.map

@@ -20,3 +20,4 @@ const button = document.getElementById('btn');
 button.addEventListener('click', () => {
     console.log("Clicked");
 });
+//# sourceMappingURL=type-aliases-and-object-types.js.map

@@ -43,3 +43,4 @@ const person = {
 if (person.role === Role.AUTHOR) {
     console.log("Yippy Kai Ye");
 }
+//# sourceMappingURL=nested-objects.js.map

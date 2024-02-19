@@ -27,3 +27,4 @@ sendRequest("Send this!", (response) => {
     console.log(response);
     return true;
 });
+//# sourceMappingURL=function-return-types-and-void.js.map
