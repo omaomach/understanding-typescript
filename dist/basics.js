@@ -1,8 +1,5 @@
 "use strict";
 function add(n1, n2, showResult, phrase) {
-    // if (typeof n1 !== "number" || typeof n2 !== "number") {
-    //     throw new Error("Input not a number")
-    // }
     if (showResult) {
         console.log(n1 + n2);
     }
