@@ -23,3 +23,8 @@ function isOlder(user: User) {
 greet({name: "Joash", age: 25})
 console.log(isOlder({name: "Joash", age: 25}))
 
+const button = document.getElementById('btn')!;
+button.addEventListener('click', () => {
+    console.log("Clicked")
+})
+
