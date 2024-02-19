@@ -1,13 +1,5 @@
 "use strict";
 const u1 = { name: "Joel", age: 22 };
-// We can simplify this code
-// function greet(user: { name: string; age: number }) {
-//   console.log("Hi, I am " + user.name);
-// }
-// function isOlder(user: { name: string; age: number }, checkAge: number) {
-//   return checkAge > user.age;
-// }
-// To
 function greet(user) {
     console.log("Hi " + user.name);
 }
@@ -20,4 +12,3 @@ const button = document.getElementById('btn');
 button.addEventListener('click', () => {
     console.log("Clicked");
 });
-//# sourceMappingURL=type-aliases-and-object-types.js.map

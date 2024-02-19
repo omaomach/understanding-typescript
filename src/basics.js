@@ -16,4 +16,3 @@ const printResults = true;
 const phrase = "This is statically typed";
 const results = add(num1, num2, printResults, phrase);
 console.log(`This is the result ${results}`);
-//# sourceMappingURL=basics.js.map

@@ -10,21 +10,16 @@ function addAndHandle(n1, n2, cb) {
     cb(result);
 }
 printResult(addNumbers(12, 13));
-let combineValue; // Function Type
+let combineValue;
 combineValue = addNumbers;
-// combineValues = printResult
-// combineValues = 25;
 console.log(combineValue(8, 8));
 addAndHandle(10, 20, (result) => {
     console.log(result);
 });
 function sendRequest(data, cb) {
-    // ... sending request with "data"
     return cb({ data: "Hi there!" });
-    // return cb({data: "Hi there!"});
 }
 sendRequest("Send this!", (response) => {
     console.log(response);
     return true;
 });
-//# sourceMappingURL=function-return-types-and-void.js.map

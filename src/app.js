@@ -27,4 +27,3 @@ const combinedStringAges = combine("22", "24", "as-number");
 console.log(combinedStringAges);
 const combinedNames = combine("Joel", "Joash", "as-string");
 console.log(combinedNames);
-//# sourceMappingURL=app.js.map

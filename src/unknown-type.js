@@ -8,4 +8,3 @@ userInput = "Joshua";
 if (typeof userInput === "string") {
     console.log(userName = userInput);
 }
-//# sourceMappingURL=unknown-type.js.map
