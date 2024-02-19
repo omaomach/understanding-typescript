@@ -11,8 +11,8 @@ function add(n1: number, n2: number, showResult: boolean, phrase: string) {
 
 const num1 = 25
 const num2 = 19
-const printResult = true;
+const printResults = true;
 const phrase = "This is statically typed"
 
-const result = add(num1, num2, printResult, phrase)
-console.log(`This is the result ${result}`)
+const results = add(num1, num2, printResults, phrase)
+console.log(`This is the result ${results}`)
