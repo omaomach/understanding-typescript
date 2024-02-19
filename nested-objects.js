@@ -1,3 +1,4 @@
+"use strict";
 // const product: {
 //     id: string;
 //     price: number;
@@ -24,13 +25,16 @@
 // const ADMIN = 0;
 // const READ_ONLY = 1;
 // const AUTHOR = 2;
+// enum Role { ADMIN, READ_ONLY, AUTHOR } // doesn't have to be all caps
+// enum Role { ADMIN = 5, READ_ONLY, AUTHOR } // READ_ONLY will 6 in that order
+// enum Role { ADMIN = "admin", READ_ONLY, AUTHOR = "author" }
 var Role;
 (function (Role) {
-    Role[Role["ADMIN"] = 0] = "ADMIN";
-    Role[Role["READ_ONLY"] = 1] = "READ_ONLY";
-    Role[Role["AUTHOR"] = 2] = "AUTHOR";
+    Role[Role["ADMIN"] = 5] = "ADMIN";
+    Role[Role["READ_ONLY"] = 7] = "READ_ONLY";
+    Role[Role["AUTHOR"] = 100] = "AUTHOR";
 })(Role || (Role = {}));
-var person = {
+const person = {
     name: "Omao",
     age: 25,
     hobbies: ["Boxing", "Coding"],

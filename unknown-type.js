@@ -1,6 +1,7 @@
-var userInput; // a bit more ristictive as compared to the any type
+"use strict";
+let userInput; // a bit more ristictive as compared to the any type
 // let userInput: any; // here typescript does not check for any types at all.
-var userName;
+let userName;
 userInput = 5;
 userInput = "Joshua";
 // userName = userInput;
