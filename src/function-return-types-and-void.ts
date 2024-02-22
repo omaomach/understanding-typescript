@@ -27,7 +27,7 @@ addAndHandle(10, 20, (result) => {
 
 function sendRequest(data: string, cb: (response: any) => void) {
     // ... sending request with "data"
-    return cb({data: "Hi there!"});
+    return cb(data);
     // return cb({data: "Hi there!"});
 }
 
@@ -35,3 +35,4 @@ sendRequest("Send this!", (response) => {
     console.log(response);
     return true;
 })
+

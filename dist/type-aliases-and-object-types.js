@@ -1,3 +1,4 @@
+"use strict";
 const u1 = { name: "Joel", age: 22 };
 function greet(user) {
     console.log("Hi " + user.name);

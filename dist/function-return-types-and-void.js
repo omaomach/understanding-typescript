@@ -1,3 +1,4 @@
+"use strict";
 function addNumbers(n1, n2) {
     return n1 + n2;
 }
@@ -16,7 +17,7 @@ addAndHandle(10, 20, (result) => {
     console.log(result);
 });
 function sendRequest(data, cb) {
-    return cb({ data: "Hi there!" });
+    return cb(data);
 }
 sendRequest("Send this!", (response) => {
     console.log(response);
