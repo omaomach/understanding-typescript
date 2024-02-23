@@ -1,7 +1,7 @@
 class Department {
     // private readonly id: string;
     // name: string;
-    private employees: string[] = []
+    protected employees: string[] = [] // unlike private, protected allows private properties of the base class to be accessed by the child classes
 
     // constructor(n: string) {
     //     this.name = n;
@@ -32,7 +32,48 @@ accounting.addEmployee("Joel");
 
 // accounting.employees[2] = "Faith";
 
-accounting.printEmployeeInformation()
+// accounting.printEmployeeInformation()
 
-const it = new Department(2, "IT")
-console.log(accounting.describe(), it.describe())
+// const it = new Department(2, "IT")
+// console.log(accounting.describe(), it.describe())
+
+
+class ITDepartment extends Department {
+    admins: string[];
+    constructor(id: number, admins: string[]) {
+        super(id, "IT");
+        this.admins = admins
+    }   
+}
+
+// const developers = new ITDepartment(1, ["Joash"]);
+// developers.addEmployee("Faith")
+// console.log(developers.printEmployeeInformation())
+
+class financeDepartment extends Department {
+    constructor(id: number, private reports: string[]) {
+        super(id, "Accounting");
+    }
+    
+    addEmployee(name: string) {
+        if (name === 'Max') {
+            return
+        }
+        this.employees.push(name);
+    }
+
+    addReport(text: string) {
+        this.reports.push(text)
+    }
+
+    printReports() {
+        console.log(this.reports);
+    }
+
+}
+
+const accounting1 = new financeDepartment(3, ["daily"]);
+accounting1.addReport("Spiderman is back fighting crime");
+accounting1.addEmployee("Gloria")
+accounting1.addEmployee("Maxwell")
+console.log(accounting1.printEmployeeInformation())
