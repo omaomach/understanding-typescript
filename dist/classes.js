@@ -5,6 +5,9 @@ class Department {
         this.name = name;
         this.employees = [];
     }
+    static createEmployee(name) {
+        return { name: name };
+    }
     describe() {
         console.log(this.name, this.id + " department");
     }
@@ -16,6 +19,9 @@ class Department {
         console.log(this.employees);
     }
 }
+Department.fiscalYear = 2024;
+const employee1 = Department.createEmployee("Onkwoko");
+console.log(employee1, Department.fiscalYear);
 const accounting = new Department(1, "Accounting");
 accounting.addEmployee("Joash");
 accounting.addEmployee("Joel");

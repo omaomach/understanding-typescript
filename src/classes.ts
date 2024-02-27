@@ -1,4 +1,5 @@
 class Department {
+    static fiscalYear = 2024;
     // private readonly id: string;
     // name: string;
     protected employees: string[] = [] // unlike private, protected allows private properties of the base class to be accessed by the child classes
@@ -8,6 +9,10 @@ class Department {
     // }
 
     constructor (private readonly id: number, public name: string) {} // this helps prevent double initialization, define which arguments the constructor takes, an access modifier and a property of the same name
+
+    static createEmployee(name: string) {
+        return { name: name };
+    }
 
     describe() {
         console.log(this.name, this.id + " department")
@@ -24,6 +29,9 @@ class Department {
     }
 
 }
+
+const employee1 = Department.createEmployee("Onkwoko");
+console.log(employee1, Department.fiscalYear)
 
 const accounting = new Department(1, "Accounting")
 accounting.addEmployee("Joash");
