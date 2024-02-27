@@ -8,9 +8,6 @@ class Department {
     static createEmployee(name) {
         return { name: name };
     }
-    describe() {
-        console.log(this.name, this.id + " department");
-    }
     addEmployee(employee) {
         this.employees.push(employee);
     }
@@ -22,16 +19,19 @@ class Department {
 Department.fiscalYear = 2024;
 const employee1 = Department.createEmployee("Onkwoko");
 console.log(employee1, Department.fiscalYear);
-const accounting = new Department(1, "Accounting");
-accounting.addEmployee("Joash");
-accounting.addEmployee("Joel");
 class ITDepartment extends Department {
     constructor(id, admins) {
         super(id, "IT");
         this.admins = admins;
     }
+    describe() {
+        console.log("IT Department - ID: " + this.id);
+    }
 }
-class financeDepartment extends Department {
+const developers = new ITDepartment(1, ["Joash"]);
+developers.addEmployee("Faith");
+developers.describe();
+class FinanceDepartment extends Department {
     get mostRecentReport() {
         if (this.lastReport) {
             return this.lastReport;
@@ -45,9 +45,19 @@ class financeDepartment extends Department {
         this.addReport(value);
     }
     constructor(id, reports) {
-        super(id, "Accounting");
+        super(id, "Finance");
         this.reports = reports;
         this.lastReport = reports[0];
+    }
+    static getInstance() {
+        if (this.instance) {
+            return this.instance;
+        }
+        this.instance = new FinanceDepartment(5, ["Harry Porter Reports"]);
+        return this.instance;
+    }
+    describe() {
+        console.log("Finance Department - ID: " + this.id);
     }
     addEmployee(name) {
         if (name === 'Max') {
@@ -63,10 +73,6 @@ class financeDepartment extends Department {
         console.log(this.reports);
     }
 }
-const accounting1 = new financeDepartment(3, ["daily"]);
-accounting1.mostRecentReport = "GOT Report";
-console.log(accounting1.mostRecentReport);
-accounting1.addReport("Spiderman is back fighting crime");
-accounting1.addEmployee("Gloria");
-accounting1.addEmployee("Maxwell");
-console.log(accounting1.printEmployeeInformation());
+const finance = FinanceDepartment.getInstance();
+const finance2 = FinanceDepartment.getInstance();
+console.log(finance, finance2);
